@@ -11,8 +11,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script>
 const SITE_SETTINGS = {
-  'phoneNumber': '+79034359423',
-  'psychicName': 'Ельвира',
+  'phoneNumber': '+79952907331',
+  'psychicName': 'Иллария',
   'city': 'Краснодар',
   'address': 'г. Москва, ул. Северная, д. 324, офис 45',
   'enableRedirect': false,
@@ -21,17 +21,16 @@ const SITE_SETTINGS = {
   'siteUrl': 'https://gadalkapotok.ru/',
   'whatsappMessage': 'Здравствуйте, хочу обратиться к вам за помощью.',
   'telegramEnabled': 1,
-  'telegramNickname': 'Elviramag781',
+  'telegramNickname': 'Ilariyamag0001',
   'yandexMetrikaId': '112307160',
   'psychicImageURL': 'https://raw.githubusercontent.com/antomimpuls/gadalkapotok.ru/main/Screenshot_5.jpg',
   'workingHours': 'ежедневно 08:30-21:30',
   'responseTime': '6-14 минут',
-  'metrikaMessengerVisible': false
-,
-  "maxEnabled": false,
-  "maxUrl": ""
+  'metrikaMessengerVisible': false,
+  'maxEnabled': false,
+  'maxUrl': ""
 };
-const PSYCHIC_NAME=SITE_SETTINGS.psychicName||'Ельвира';
+const PSYCHIC_NAME=SITE_SETTINGS.psychicName||'Иллария';
 const PHONE_DIGITS=(SITE_SETTINGS.phoneNumber||'').replace(/\D/g,'');
 const WHATSAPP_MESSAGE=PSYCHIC_NAME ? `Здравствуйте, ${PSYCHIC_NAME}! Хочу обратиться к вам за помощью.` : 'Здравствуйте, хочу обратиться к вам за помощью.';
 const ENCODED_MESSAGE=encodeURIComponent(WHATSAPP_MESSAGE);
@@ -1248,7 +1247,7 @@ function replaceNamePlaceholders(name){
 }
 
 function setImagesAndTexts(){
-    const psychicName = SETTINGS.psychicName || 'Ельвира';
+    const psychicName = SETTINGS.psychicName || 'Иллария';
     replaceNamePlaceholders(psychicName);
     const heroName = document.getElementById('heroName');
     if (heroName) {
