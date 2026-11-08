@@ -11,8 +11,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script>
 const SITE_SETTINGS = {
-  'phoneNumber': '+79952907331',
-  'psychicName': 'Иллария',
+  'phoneNumber': '+79612006179',
+  'psychicName': 'Оксана Юрьевна',
   'city': 'Краснодар',
   'address': 'г. Москва, ул. Северная, д. 324, офис 45',
   'enableRedirect': false,
@@ -21,25 +21,25 @@ const SITE_SETTINGS = {
   'siteUrl': 'https://gadalkapotok.ru/',
   'whatsappMessage': 'Здравствуйте, хочу обратиться к вам за помощью.',
   'telegramEnabled': true,
-  'telegramNickname': 'Ilariyamag0001',
+  'telegramNickname': 'Vselena2000000',
   'yandexMetrikaId': '113167068',
   'psychicImageURL': 'https://gadalkapotok.ru/photo-3de7d0253fe24b97836e7d0d2d2f32c2.jpg',
   'workingHours': 'ежедневно 08:30-21:30',
   'responseTime': '6-14 минут',
   'metrikaMessengerVisible': false,
   'maxEnabled': true,
-  'maxUrl': "https://web.max.ru/:push?userId=456375392"
+  'maxUrl': "https://web.max.ru/:push?userId=149400826"
 };
-const PSYCHIC_NAME=SITE_SETTINGS.psychicName||'Иллария';
+const PSYCHIC_NAME=SITE_SETTINGS.psychicName||'Оксана Юрьевна';
 const PHONE_DIGITS=(SITE_SETTINGS.phoneNumber||'').replace(/\D/g,'');
 const WHATSAPP_MESSAGE=PSYCHIC_NAME ? `Здравствуйте, ${PSYCHIC_NAME}! Хочу обратиться к вам за помощью.` : 'Здравствуйте, хочу обратиться к вам за помощью.';
 const ENCODED_MESSAGE=encodeURIComponent(WHATSAPP_MESSAGE);
-const WA_URL="https://wa.me/79952907331?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%98%D0%BB%D0%BB%D0%B0%D1%80%D0%B8%D1%8F%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%D1%81%D1%8F%20%D0%BA%20%D0%B2%D0%B0%D0%BC%20%D0%B7%D0%B0%20%D0%BF%D0%BE%D0%BC%D0%BE%D1%89%D1%8C%D1%8E.";
-const FALLBACK_WA_URL="https://wa.me/79952907331?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%98%D0%BB%D0%BB%D0%B0%D1%80%D0%B8%D1%8F%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%D1%81%D1%8F%20%D0%BA%20%D0%B2%D0%B0%D0%BC%20%D0%B7%D0%B0%20%D0%BF%D0%BE%D0%BC%D0%BE%D1%89%D1%8C%D1%8E.";
+const WA_URL="https://wa.me/79612006179?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%9E%D0%BA%D1%81%D0%B0%D0%BD%D0%B0%20%D0%AE%D1%80%D1%8C%D0%B5%D0%B2%D0%BD%D0%B0%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%D1%81%D1%8F%20%D0%BA%20%D0%B2%D0%B0%D0%BC%20%D0%B7%D0%B0%20%D0%BF%D0%BE%D0%BC%D0%BE%D1%89%D1%8C%D1%8E.";
+const FALLBACK_WA_URL="https://wa.me/79612006179?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%9E%D0%BA%D1%81%D0%B0%D0%BD%D0%B0%20%D0%AE%D1%80%D1%8C%D0%B5%D0%B2%D0%BD%D0%B0%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%D1%81%D1%8F%20%D0%BA%20%D0%B2%D0%B0%D0%BC%20%D0%B7%D0%B0%20%D0%BF%D0%BE%D0%BC%D0%BE%D1%89%D1%8C%D1%8E.";
 const TARGET_WA_URL=WA_URL||FALLBACK_WA_URL;
 const TELEGRAM_ENABLED=Number(SITE_SETTINGS.telegramEnabled||0)===1;
 const TELEGRAM_NICKNAME=(SITE_SETTINGS.telegramNickname||'').replace(/^@+/,'');
-const TELEGRAM_URL="https://t.me/Ilariyamag0001?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%98%D0%BB%D0%BB%D0%B0%D1%80%D0%B8%D1%8F%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%D1%81%D1%8F%20%D0%BA%20%D0%B2%D0%B0%D0%BC%20%D0%B7%D0%B0%20%D0%BF%D0%BE%D0%BC%D0%BE%D1%89%D1%8C%D1%8E.";
+const TELEGRAM_URL="https://t.me/Vselena2000000?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%9E%D0%BA%D1%81%D0%B0%D0%BD%D0%B0%20%D0%AE%D1%80%D1%8C%D0%B5%D0%B2%D0%BD%D0%B0%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%D1%81%D1%8F%20%D0%BA%20%D0%B2%D0%B0%D0%BC%20%D0%B7%D0%B0%20%D0%BF%D0%BE%D0%BC%D0%BE%D1%89%D1%8C%D1%8E.";
 
 const SITE_STATS_TRACKER_CONFIG = {
     projectUrl: "https://stats.72-56-243-254.sslip.io",
@@ -516,13 +516,13 @@ footer{background:#0e1408;padding:40px 0;text-align:center;border-top:1px solid 
 .studio-photo-backdrop{position:absolute;inset:7px;border-radius:50%;overflow:hidden;z-index:1;background:center/cover no-repeat url("https://gadalkapotok.ru/photo-3de7d0253fe24b97836e7d0d2d2f32c2.jpg");filter:blur(8px);opacity:.85;pointer-events:none}
 .hero-img #psychicImage{box-sizing:border-box!important;object-fit:contain!important;object-position:center!important;padding:12%!important;background:transparent!important}
 </style>
-<!-- CONVERSIA_CONTACT_CONTRACT_V1 ca367d842a56a5091fc9b81a3371a128768715847d910148c03ef780c6370cab -->
+<!-- CONVERSIA_CONTACT_CONTRACT_V1 66c1edba26d8b8b1ee54f91919ceb8fd7a5ccf193087d613cefa2189dfbc1938 -->
 </head>
 <body>
 
 <div class="sticky-messengers" id="stickyMessengers">
-<a data-msg-url="https://wa.me/79952907331" class="btn btn-wa" target="_blank" rel="noopener" data-wa="true">📲 Чат в WhatsApp</a>
-<a data-msg-url="https://t.me/Ilariyamag0001" class="btn btn-tg" target="_blank" rel="noopener" data-telegram="true">✈ Написать в Telegram</a>
+<a data-msg-url="https://wa.me/79612006179" class="btn btn-wa" target="_blank" rel="noopener" data-wa="true">📲 Чат в WhatsApp</a>
+<a data-msg-url="https://t.me/Vselena2000000" class="btn btn-tg" target="_blank" rel="noopener" data-telegram="true">✈ Написать в Telegram</a>
 </div>
 
 <section class="hero">
@@ -540,8 +540,8 @@ footer{background:#0e1408;padding:40px 0;text-align:center;border-top:1px solid 
 <div class="trust-item"><span style="font-size:1.5rem">📱</span><span style="font-size:0.85rem;font-weight:600">Рядом на всём пути</span></div>
         </div>
         <div class="hero-cta">
-        <a data-msg-url="https://wa.me/79952907331" class="btn btn-wa" target="_blank" rel="noopener" data-wa="true">📲 Написать в WhatsApp</a>
-        <a data-msg-url="https://t.me/Ilariyamag0001" class="btn btn-tg" target="_blank" rel="noopener" data-telegram="true">✈ Связаться в Telegram</a>
+        <a data-msg-url="https://wa.me/79612006179" class="btn btn-wa" target="_blank" rel="noopener" data-wa="true">📲 Написать в WhatsApp</a>
+        <a data-msg-url="https://t.me/Vselena2000000" class="btn btn-tg" target="_blank" rel="noopener" data-telegram="true">✈ Связаться в Telegram</a>
         </div>
         </div>
         <div>
@@ -941,7 +941,7 @@ footer{background:#0e1408;padding:40px 0;text-align:center;border-top:1px solid 
         <p>ОГРНИП: 325774600019856</p>
         <p>ИНН: 773401256734</p>
         <p>Адрес: 123112, г. Москва, Пресненская наб., д. 8, офис 1205</p>
-        <p>Телефон: +7 (995) 290-73-31</p>
+        <p>Телефон: +7 (961) 200-61-79</p>
         <p>Email: info@gadalkapotok.ru</p>
         </div>
         <p style="font-size:0.9rem;color:#92a887;font-style:italic;margin-bottom:30px">Дата последнего обновления: 5 ноября 2025 года</p>
@@ -976,7 +976,7 @@ footer{background:#0e1408;padding:40px 0;text-align:center;border-top:1px solid 
 <p>Пишите на контактный email, указанный ниже.</p>
         <h2>8. Контактная информация</h2>
         <div class="company-info">
-        <p>Телефон: <a href="tel:+79952907331" style="color:#479724;text-decoration:none">+7 (995) 290-73-31</a></p>
+        <p>Телефон: <a href="tel:+79612006179" style="color:#479724;text-decoration:none">+7 (961) 200-61-79</a></p>
         <p>Email: <a href="mailto:info@gadalkapotok.ru" style="color:#479724;text-decoration:none">info@gadalkapotok.ru</a></p>
         <p>Сайт: <a href="https://gadalkapotok.ru/" style="color:#479724;text-decoration:none" target="_blank">https://gadalkapotok.ru</a></p>
         </div>
@@ -1253,7 +1253,7 @@ function replaceNamePlaceholders(name){
 }
 
 function setImagesAndTexts(){
-    const psychicName = SETTINGS.psychicName || 'Иллария';
+    const psychicName = SETTINGS.psychicName || 'Оксана Юрьевна';
     replaceNamePlaceholders(psychicName);
     const heroName = document.getElementById('heroName');
     if (heroName) {
